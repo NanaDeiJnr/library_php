@@ -10,7 +10,7 @@ class LibraryController extends Controller
     public function borrow(Request $request) {
         $validator = Validator::make($request->all(), [
             'user_id' => 'required|exists:users,id',
-            'book_id' => 'required|exists:books,id', 
+            'book_id' => 'required|exists:books,id',
         ]);
 
         if ($validator->fails()) {
